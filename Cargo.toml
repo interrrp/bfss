@@ -6,4 +6,5 @@ authors = ["interrrp <int@addictedto.coffee>"]
 edition = "2021"
 
 [dependencies]
+brainfuck = "0.2.1"
 clap = { version = "4.4.7", features = ["derive"] }
