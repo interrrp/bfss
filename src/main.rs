@@ -1,3 +1,9 @@
+use clap::Parser;
+
+use bfss::Args;
+
 fn main() {
-    println!("Hello, world!");
+    let args = Args::parse();
+
+    println!("Starting {}", args.file);
 }
