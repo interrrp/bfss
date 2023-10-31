@@ -22,7 +22,7 @@ async fn main() -> io::Result<()> {
         let mut stream = stream.into_std().unwrap();
         let mut stream_clone = stream.try_clone().unwrap();
         let contents = contents.clone();
-        tokio::spawn(async move {
+        tokio::task::spawn_blocking(move || {
             eval_brainfuck(&contents, &mut stream, &mut stream_clone).unwrap();
         });
     }
